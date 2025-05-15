@@ -1,48 +1,49 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>6º Tabelionato de Notas de Belo Horizonte</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Cadastro de Casal</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>6° Tabelionato de Notas de Belo Horizonte</h1>
-        
-        <form action="processar_dados.php" method="POST">
-            
-            <section>
-                <h2>Informações</h2>
-                <label for="nome_noivo">Nome Completo</label>
-                <input type="text" id="nome_noivo" name="nome_noivo" required>
+    <h1>Cadastro de Casal</h1>
+    <form id="cadastro-form">
+        <!-- Seção de Dados do Noivo -->
+        <section id="noivo">
+            <h2>Dados do Noivo</h2>
+            <label for="nome-noivo">Nome Completo:</label>
+            <input type="text" id="nome-noivo" name="nome-noivo"><br><br>
+            <label for="cpf-noivo">CPF:</label>
+            <input type="text" id="cpf-noivo" name="cpf-noivo"><br><br>
+            <!-- Outros campos para o noivo -->
+        </section>
 
-                <label for="data_nascimento_noivo">Data de Nascimento</label>
-                <input type="date" id="data_nascimento_noivo" name="data_nascimento_noivo" required>
+        <!-- Seção de Dados da Noiva -->
+        <section id="noiva">
+            <h2>Dados da Noiva</h2>
+            <label for="nome-noiva">Nome Completo:</label>
+            <input type="text" id="nome-noiva" name="nome-noiva"><br><br>
+            <label for="cpf-noiva">CPF:</label>
+            <input type="text" id="cpf-noiva" name="cpf-noiva"><br><br>
+            <!-- Outros campos para a noiva -->
+        </section>
 
-                <label for="cpf_noivo">CPF</label>
-                <input type="text" id="cpf_noivo" name="cpf_noivo" pattern="\d{11}" required>
+        <!-- Seção de Dados do Casamento -->
+        <section id="casamento">
+            <h2>Dados do Casamento</h2>
+            <label for="data-casamento">Data do Casamento:</label>
+            <input type="date" id="data-casamento" name="data-casamento"><br><br>
+            <!-- Outros campos para o casamento -->
+        </section>
 
-                <label for="rg_noivo">RG</label>
-                <input type="text" id="rg_noivo" name="rg_noivo" required>
+        <!-- Seção de Documentos Necessários -->
+        <section id="documentos">
+            <h2>Documentos Necessários</h2>
+            <!-- Campos para upload de documentos -->
+        </section>
 
-                <label for="estado_noivo">Estado Civil</label>
-                <select id="estado_noivo" name="estado_noivo" required>
-                    <option value="solteiro">Solteiro</option>
-                    <option value="divorciado">Divorciado</option>
-                    <option value="viuvo">Viúvo</option>
-                </select>
-
-                <label for="naturalidade_noivo">Naturalidade</label>
-                <input type="text" id="naturalidade_noivo" name="naturalidade_noivo" required>
-            </section>
-
-            <section>
-                
-            </section>
-
-            <button type="submit">Enviar Cadastro</button>
-        </form>
-    </div>
+        <button type="submit">Enviar</button>
+    </form>
 </body>
 </html>
