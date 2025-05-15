@@ -1,17 +1,81 @@
 <!DOCTYPE html>
-<html lang="pt-br"
+<html lang="pt-br">
 <head>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Casal - 6º Tabelionato de Notas de Belo Horizonte</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>6° Tabelionato de Notas</h1>
-        <p>Tabelião João Teodoro da Silva</p>
-    </header>
-    <main>
-        <input type="checkbox"
-    </main>
-    <footer>
+    <div class="container">
+        <h1>Cadastro de Casal para Certidão de Casamento</h1>
         
-    </footer>
+        <form action="processar_dados.php" method="POST">
+            
+            <section>
+                <h2>Dados do Noivo</h2>
+                <label for="nome_noivo">Nome Completo</label>
+                <input type="text" id="nome_noivo" name="nome_noivo" required>
+
+                <label for="data_nascimento_noivo">Data de Nascimento</label>
+                <input type="date" id="data_nascimento_noivo" name="data_nascimento_noivo" required>
+
+                <label for="cpf_noivo">CPF</label>
+                <input type="text" id="cpf_noivo" name="cpf_noivo" pattern="\d{11}" required>
+
+                <label for="rg_noivo">RG</label>
+                <input type="text" id="rg_noivo" name="rg_noivo" required>
+
+                <label for="estado_noivo">Estado Civil</label>
+                <select id="estado_noivo" name="estado_noivo" required>
+                    <option value="solteiro">Solteiro</option>
+                    <option value="divorciado">Divorciado</option>
+                    <option value="viuvo">Viúvo</option>
+                </select>
+
+                <label for="naturalidade_noivo">Naturalidade</label>
+                <input type="text" id="naturalidade_noivo" name="naturalidade_noivo" required>
+            </section>
+
+            <section>
+                <h2>Dados da Noiva</h2>
+                <label for="nome_noiva">Nome Completo</label>
+                <input type="text" id="nome_noiva" name="nome_noiva" required>
+
+                <label for="data_nascimento_noiva">Data de Nascimento</label>
+                <input type="date" id="data_nascimento_noiva" name="data_nascimento_noiva" required>
+
+                <label for="cpf_noiva">CPF</label>
+                <input type="text" id="cpf_noiva" name="cpf_noiva" pattern="\d{11}" required>
+
+                <label for="rg_noiva">RG</label>
+                <input type="text" id="rg_noiva" name="rg_noiva" required>
+
+                <label for="estado_noiva">Estado Civil</label>
+                <select id="estado_noiva" name="estado_noiva" required>
+                    <option value="solteira">Solteira</option>
+                    <option value="divorciada">Divorciada</option>
+                    <option value="viuva">Viúva</option>
+                </select>
+
+                <label for="naturalidade_noiva">Naturalidade</label>
+                <input type="text" id="naturalidade_noiva" name="naturalidade_noiva" required>
+            </section>
+
+            <section>
+                <h2>Informações de Contato</h2>
+                <label for="telefone_noivo">Telefone (Noivo)</label>
+                <input type="tel" id="telefone_noivo" name="telefone_noivo" required>
+
+                <label for="telefone_noiva">Telefone (Noiva)</label>
+                <input type="tel" id="telefone_noiva" name="telefone_noiva" required>
+
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+            </section>
+
+            <button type="submit">Enviar Cadastro</button>
+        </form>
+    </div>
 </body>
+</html>
