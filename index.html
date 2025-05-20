@@ -3,49 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>6° Tabelionato de Notas De Belo Horizonte</title>
-    <link rel="stylesheet" href="st/styles.css"> <!--arquivo de estilos css-->
-
+    <title>Cadastro de Casal</title>
+    <link rel="stylesheet" href="st/style.css"> <!-- Arquivo de estilos CSS -->
 </head>
 <body>
-    <h1>6° Tabelionato de Notas De Belo Horizonte</h1>
-    <form id="cadastro-form">
-        
-        <!-- Seção de Dados do Noivo -->
-        <section id="noivo">
-            <h2>Infornações</h2>
-            <label for="nome-noivo">Nome Completo:</label>
-            <input type="text" id="nome-noivo" name="nome-noivo"><br><br>
-            <label for="cpf-noivo">CPF:</label>
-            <input type="text" id="cpf-noivo" name="cpf-noivo"><br><br>
-            <!-- Outros campos para o noivo -->
-        </section>
+    <header>
+        <h1>o 6º Tabelionato de Notas de Belo Horizonte</h1>
+    </header>
+    
+    <main>
+        <form action="/submit" method="POST">
+            <!-- Informações do Cônjuge 1 -->
+            <section>
+                <h2>Informações do Cônjuge 1</h2>
+                <label for="nome_conjuge1">Nome Completo:</label>
+                <input type="text" id="nome_conjuge1" name="nome_conjuge1" required>
 
-        <!-- Seção de Dados da Noiva -->
-        <section id="noiva">
-            <h2>Dados da Noiva</h2>
-            <label for="nome-noiva">Nome Completo:</label>
-            <input type="text" id="nome-noiva" name="nome-noiva"><br><br>
-            <label for="cpf-noiva">CPF:</label>
-            <input type="text" id="cpf-noiva" name="cpf-noiva"><br><br>
-            <!-- Outros campos para a noiva -->
-        </section>
+                <label for="data_nascimento_conjuge1">Data de Nascimento:</label>
+                <input type="date" id="data_nascimento_conjuge1" name="data_nascimento_conjuge1" required>
 
-        <!-- Seção de Dados do Casamento -->
-        <section id="casamento">
-            <h2>Dados do Casamento</h2>
-            <label for="data-casamento">Data do Casamento:</label>
-            <input type="date" id="data-casamento" name="data-casamento"><br><br>
-            <!-- Outros campos para o casamento -->
-        </section>
+                <label for="cpf_conjuge1">CPF:</label>
+                <input type="text" id="cpf_conjuge1" name="cpf_conjuge1" required>
+                 
+                <label for="endereço_conjuge1">Endereço:</label>
+                <input type="text" id="endereço_conjuge1" name="endereço_conjuge1" required>
 
-        <!-- Seção de Documentos Necessários -->
-        <section id="documentos">
-            <h2>Documentos Necessários</h2>
-            <!-- Campos para upload de documentos -->
-        </section>
+                <!-- Adicionar mais campos conforme necessário -->
+            </section>
+            
+            <!-- Informações do Cônjuge 2 -->
+            <section>
+                <h2>Informações do Cônjuge 2</h2>
+                <label for="nome_conjuge2">Nome Completo:</label>
+                <input type="text" id="nome_conjuge2" name="nome_conjuge2" required>
 
-        <button type="submit">Enviar</button>
-    </form>
+                <label for="data_nascimento_conjuge2">Data de Nascimento:</label>
+                <input type="date" id="data_nascimento_conjuge2" name="data_nascimento_conjuge2" required>
+
+                <label for="cpf_conjuge2">CPF:</label>
+                <input type="text" id="cpf_conjuge2" name="cpf_conjuge2" required>
+
+                <label for="endereço_conjuge2">Endereço:</label>
+                <input type="text" id="endereço_conjuge2" name="endereço_conjuge2" required>
+
+                <!-- Adicionar mais campos conforme necessário -->
+            </section>
+
+            <!-- Informações do Casamento -->
+            <section>
+                <h2>Informações do Casamento</h2>
+                <label for="data_casamento">Data do Casamento:</label>
+                <input type="date" id="data_casamento" name="data_casamento" required>
+
+                <label for="local_casamento">Local do Casamento:</label>
+                <input type="text" id="local_casamento" name="local_casamento" required>
+                
+                <!-- Testemunhas -->
+                <label for="testemunhas">Testemunhas:</label>
+                <input type="text" id="testemunhas" name="testemunhas">
+            </section>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>© 2025 6º Tabelionato de Notas de Belo Horizonte</p>
+    </footer>
 </body>
 </html>
