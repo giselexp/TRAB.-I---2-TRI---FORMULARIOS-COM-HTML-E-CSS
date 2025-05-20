@@ -1,74 +1,167 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Casal</title>
-    <link rel="stylesheet" href="st/style.css"> <!-- Arquivo de estilos CSS -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cadastro de Casal - 6º Tabelionato de Notas BH</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>o 6º Tabelionato de Notas de Belo Horizonte</h1>
-    </header>
-    
-    <main>
-        <form action="/submit" method="POST">
-            <!-- Informações do Cônjuge 1 -->
-            <section>
-                <h2>Informações do Cônjuge 1</h2>
-                <label for="nome_conjuge1">Nome Completo:</label>
-                <input type="text" id="nome_conjuge1" name="nome_conjuge1" required>
 
-                <label for="data_nascimento_conjuge1">Data de Nascimento:</label>
-                <input type="date" id="data_nascimento_conjuge1" name="data_nascimento_conjuge1" required>
+  <form>
+    <h2>Cadastro de Pessoa Física (Casal)</h2>
 
-                <label for="cpf_conjuge1">CPF:</label>
-                <input type="text" id="cpf_conjuge1" name="cpf_conjuge1" required>
-                 
-                <label for="endereço_conjuge1">Endereço:</label>
-                <input type="text" id="endereço_conjuge1" name="endereço_conjuge1" required>
+    <!-- Seção Pessoa 1 -->
+    <div class="form-section">
+      <h3>Dados do(a) Requerente</h3>
+      <label>Posição</label>
+      <input type="text" placeholder="Ex: Outorgante, Comprador..."/>
 
-                <!-- Adicionar mais campos conforme necessário -->
-            </section>
-            
-            <!-- Informações do Cônjuge 2 -->
-            <section>
-                <h2>Informações do Cônjuge 2</h2>
-                <label for="nome_conjuge2">Nome Completo:</label>
-                <input type="text" id="nome_conjuge2" name="nome_conjuge2" required>
+      <label>Nome Completo</label>
+      <input type="text"/>
 
-                <label for="data_nascimento_conjuge2">Data de Nascimento:</label>
-                <input type="date" id="data_nascimento_conjuge2" name="data_nascimento_conjuge2" required>
+      <div class="row">
+        <div>
+          <label>Documento de Identidade</label>
+          <input type="text"/>
+        </div>
+        <div>
+          <label>Órgão Expedidor</label>
+          <input type="text"/>
+        </div>
+        <div>
+          <label>CPF</label>
+          <input type="text"/>
+        </div>
+      </div>
 
-                <label for="cpf_conjuge2">CPF:</label>
-                <input type="text" id="cpf_conjuge2" name="cpf_conjuge2" required>
+      <label>Estado Civil</label>
+      <div class="radio-group">
+        <label><input type="radio" name="estadoCivil" value="Solteiro"/> Solteiro</label>
+        <label><input type="radio" name="estadoCivil" value="Casado"/> Casado</label>
+        <label><input type="radio" name="estadoCivil" value="Separado"/> Separado</label>
+        <label><input type="radio" name="estadoCivil" value="Divorciado"/> Divorciado</label>
+        <label><input type="radio" name="estadoCivil" value="Viúvo"/> Viúvo</label>
+      </div>
 
-                <label for="endereço_conjuge2">Endereço:</label>
-                <input type="text" id="endereço_conjuge2" name="endereço_conjuge2" required>
+      <label>Vive em união estável?</label>
+      <div class="radio-group">
+        <label><input type="radio" name="uniaoEstavel" value="Sim"/> SIM</label>
+        <label><input type="radio" name="uniaoEstavel" value="Nao"/> NÃO</label>
+      </div>
 
-                <!-- Adicionar mais campos conforme necessário -->
-            </section>
+      <div class="row">
+        <div>
+          <label>Profissão</label>
+          <input type="text"/>
+        </div>
+        <div>
+          <label>Naturalidade</label>
+          <input type="text"/>
+        </div>
+      </div>
 
-            <!-- Informações do Casamento -->
-            <section>
-                <h2>Informações do Casamento</h2>
-                <label for="data_casamento">Data do Casamento:</label>
-                <input type="date" id="data_casamento" name="data_casamento" required>
+      <label>Filiação</label>
+      <input type="text"/>
 
-                <label for="local_casamento">Local do Casamento:</label>
-                <input type="text" id="local_casamento" name="local_casamento" required>
-                
-                <!-- Testemunhas -->
-                <label for="testemunhas">Testemunhas:</label>
-                <input type="text" id="testemunhas" name="testemunhas">
-            </section>
+      <h4>Endereço</h4>
+      <input type="text" placeholder="Logradouro"/>
 
-            <button type="submit">Enviar</button>
-        </form>
-    </main>
+      <div class="row">
+        <div>
+          <label>Número</label>
+          <input type="text"/>
+        </div>
+        <div>
+          <label>Complemento</label>
+          <input type="text"/>
+        </div>
+      </div>
 
-    <footer>
-        <p>© 2025 6º Tabelionato de Notas de Belo Horizonte</p>
-    </footer>
+      <div class="row">
+        <div>
+          <label>Bairro</label>
+          <input type="text"/>
+        </div>
+        <div>
+          <label>Cidade</label>
+          <input type="text"/>
+        </div>
+      </div>
+
+      <div class="row">
+        <div>
+          <label>Estado</label>
+          <input type="text"/>
+        </div>
+        <div>
+          <label>CEP</label>
+          <input type="text"/>
+        </div>
+      </div>
+
+      <div class="row">
+        <div>
+          <label>Telefone</label>
+          <input type="text"/>
+        </div>
+        <div>
+          <label>E-mail</label>
+          <input type="email"/>
+        </div>
+      </div>
+    </div>
+
+    <!-- Seção Cônjuge -->
+    <div class="form-section">
+      <h3>Dados do(a) Cônjuge</h3>
+
+      <label>Nome Completo</label>
+      <input type="text"/>
+
+      <div class="row">
+        <div>
+          <label>Documento de Identidade</label>
+          <input type="text"/>
+        </div>
+        <div>
+          <label>Órgão Expedidor</label>
+          <input type="text"/>
+        </div>
+        <div>
+          <label>CPF</label>
+          <input type="text"/>
+        </div>
+      </div>
+
+      <div class="row">
+        <div>
+          <label>Profissão</label>
+          <input type="text"/>
+        </div>
+        <div>
+          <label>Naturalidade</label>
+          <input type="text"/>
+        </div>
+      </div>
+
+      <label>Filiação</label>
+      <input type="text"/>
+
+      <div class="row">
+        <div>
+          <label>Telefone</label>
+          <input type="text"/>
+        </div>
+        <div>
+          <label>E-mail</label>
+          <input type="email"/>
+        </div>
+      </div>
+    </div>
+
+    <button type="submit">Enviar Cadastro</button>
+  </form>
+
 </body>
 </html>
